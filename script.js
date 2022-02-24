@@ -6,22 +6,22 @@ $(document).ready(function() {
     
     let description = $(".description");
     let saveButton = $(".saveBtn");
-    let currentHour = moment().hour();
+    let current = moment().hour();
     
-    console.log(currentHour);
-    console.log(typeof currentHour);
+    // console.log(currentHour);
+    // console.log(typeof currentHour);
     
     
     // Color coding the time blocks using each and comparing the moment current time (currentHour) to the id attribute assigned to the textarea.
     description.each(function () {
         let timeBlock = parseInt($(this).attr("id"));
     
-        if (timeBlock === currentHour) {
+        if (timeBlock === current) {
             $(this).addClass("present");
             $(this).removeClass("future");
             $(this).removeClass("past");
         }
-        else if (timeBlock < currentHour) {
+        else if (timeBlock < current) {
             $(this).addClass("past");
             $(this).removeClass("future");
             $(this).removeClass("present");
