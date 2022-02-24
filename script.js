@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-    // Adding current date to the jumbotron.
-    $("#currentDay").text(moment().format("MMMM Do YYYY"));
+    // Adding date
+    $("#date").text(moment().format("MMMM Do YYYY"));
     
     
     let description = $(".description");
@@ -42,12 +42,12 @@ $(document).ready(function() {
             let taskValue = localStorage.getItem(objectKey);
             let rowHour = $(this).siblings(".hour").text();
             
-            console.log(rowHour);
-            console.log(typeof rowHour);
-            console.log(objectKey);
-            console.log(typeof objectKey);
-            console.log(taskValue);
-            console.log(typeof taskValue);
+            // console.log(rowHour);
+            // console.log(typeof rowHour);
+            // console.log(objectKey);
+            // console.log(typeof objectKey);
+            // console.log(taskValue);
+            // console.log(typeof taskValue);
            
             if (objectKey === rowHour) {
                 $(this).val(taskValue);
@@ -57,14 +57,10 @@ $(document).ready(function() {
     });
     
     // Function to save task input once the save button is clicked. 
-    function saveTasks () {
+    function tasks () {
         let currentTime = $(this).data("hour");
         let rowHour = $(this).siblings(".hour").text();
         let task = $(this).siblings(".description").val();
-    
-        console.log(currentTime);
-        console.log(rowHour);
-        console.log(task);
     
         if (task === "") {
             localStorage.setItem(rowHour, "");
@@ -74,6 +70,6 @@ $(document).ready(function() {
         }
     }
     
-    saveButton.on("click", saveTasks);
+    saveButton.on("click", tasks);
     
     });
