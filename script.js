@@ -38,25 +38,18 @@ $(document).ready(function() {
     description.each(function() {
     
         for (let i = 0; i < localStorage.length; i++) {
-            let objectKey = localStorage.key(i);
-            let taskValue = localStorage.getItem(objectKey);
+            let object = localStorage.key(i);
+            let value = localStorage.getItem(object);
             let rowHour = $(this).siblings(".hour").text();
             
-            // console.log(rowHour);
-            // console.log(typeof rowHour);
-            // console.log(objectKey);
-            // console.log(typeof objectKey);
-            // console.log(taskValue);
-            // console.log(typeof taskValue);
-           
-            if (objectKey === rowHour) {
-                $(this).val(taskValue);
+            if (object === rowHour) {
+                $(this).val(value);
             }
            
         }
     });
     
-    // Function to save task input once the save button is clicked. 
+// saving to local storage
     function tasks () {
         let currentTime = $(this).data("hour");
         let rowHour = $(this).siblings(".hour").text();
