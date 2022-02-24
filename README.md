@@ -23,3 +23,4 @@ https://danpgolden.github.io/scheduler/
 
 ## Example
 The following is an image of the application in use.
+![Workday Scheduler Example](newschedule.png)
