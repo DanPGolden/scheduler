@@ -14,6 +14,7 @@ This is a simple calendar application that allows a user to save events for each
 * CSS
 * JavaScript
 * JQuery
+* Bootstrap
 <br>
 
 ## Deployed Application
