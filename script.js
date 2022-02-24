@@ -8,11 +8,9 @@ $(document).ready(function() {
     let saveButton = $(".saveBtn");
     let current = moment().hour();
     
-    // console.log(currentHour);
-    // console.log(typeof currentHour);
+
     
-    
-    // Color coding the time blocks using each and comparing the moment current time (currentHour) to the id attribute assigned to the textarea.
+    // color coding rows to their designated times
     description.each(function () {
         let timeBlock = parseInt($(this).attr("id"));
     
@@ -33,7 +31,7 @@ $(document).ready(function() {
         }
     });
     
-    // Using .each function in order to populate tasks that have been saved in local storage to the appropriate row upon loading the browser. 
+    // populating to appropriate row upon loading browser
     
     description.each(function() {
     
